@@ -1,9 +1,6 @@
 'use client'
 import { FC, useEffect, useState } from 'react'
 import Navbar from '../organisme/Navbar'
-import CommonLayout from '../layout/CommonLayout';
-import ListManga from '../organisme/ListManga';
-import RecomendationManga from '../organisme/RecomendationManga';
 import Jumbroton from '../organisme/Jumbroton';
 import { useInterval } from '@mantine/hooks';
 import { jumbotronManga } from '@/app/services/data/jumbotronManga';
@@ -32,12 +29,6 @@ const HomePage: FC = () => {
         <Navbar />
         <Jumbroton id={jumbotronManga[idx].id} title={jumbotronManga[idx].title} description={jumbotronManga[idx].desciption} />
       </div>
-      {/* <div className='py-4 bg-gradient-to-r from-[#0f2743] to-[#0f4583]'>
-        <CommonLayout>
-          <RecomendationManga />
-          <ListManga />
-        </CommonLayout>
-      </div> */}
     </>
   );
 }

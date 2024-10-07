@@ -1,7 +1,5 @@
-import { title } from 'process';
 import { useState } from 'react'
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
-import { json } from 'stream/consumers';
 
 type Props = {
     id: string,

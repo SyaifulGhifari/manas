@@ -1,5 +1,5 @@
 'use client'
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import Text from '../atoms/Text';
 import Image from '../atoms/Image';
 import Rating from '../atoms/Rating';

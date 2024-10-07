@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../atoms/Button';
+// import Button from '../atoms/Button';
 import { useDebouncedCallback, useClickOutside } from '@mantine/hooks';
 import Image from '../atoms/Image';
 import { useMangaStore } from '@/app/store/mangasStore';

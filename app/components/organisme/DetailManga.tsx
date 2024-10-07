@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import CardDetail from '../molecules/CardDetail';
 import CardChapter from '../molecules/CardChapter';
 import Skeleton from '../atoms/Skeleton';
-import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import Bookmark from '../molecules/Bookmark';
 import { useDetail} from '@/app/services/hooks/api';
 

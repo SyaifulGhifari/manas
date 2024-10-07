@@ -2,7 +2,6 @@
 import { useMangaStore } from '@/app/store/mangasStore'
 import React, { useEffect, useState } from 'react'
 import Image from '../atoms/Image'
-import { useSearchParams } from 'next/navigation';
 import { useChapter } from '@/app/services/hooks/api';
 
 type Props = {}
