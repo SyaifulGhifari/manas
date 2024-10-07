@@ -13,7 +13,7 @@ const Logo: FC<LogoProps> = ({ src, alt, size }) => {
     router.push('/home')
   }
 
-  return <img src={src} alt={alt} width={size} height={size} onClick={handleClick} />;
+  return <img src={src} alt={alt} width={size} height={size} onClick={handleClick} className='cursor-pointer' />;
 }
 
 export default Logo;

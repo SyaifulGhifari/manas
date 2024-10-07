@@ -8,21 +8,39 @@ import { useRouter } from 'next/navigation';
 type Props = {
     title: string
     date: string
-    id : string
+    id: string
+    manga: string
 }
 
 const CardChapter = (props: Props) => {
 
-    const {setIdChapter} = useMangaStore()
+    const { setIdChapter } = useMangaStore()
     const router = useRouter()
 
     const handleDate = (date: string) => {
         return moment(date).locale('id').format('DD MMMM YYYY')
     }
 
-    const handleChapter = () => {
+    const handleChapter = async () => {
+        // const listIsRead = localStorage.getItem('isRead')
+        
+        // const arrayIsRead = listIsRead ? JSON.parse(listIsRead) : [];
+        // console.log('arry',arrayIsRead)
+        // if (arrayIsRead[props.manga]){
+        //     if (!arrayIsRead[props.manga].includes(props.id)) {
+        //         arrayIsRead[props.manga].push(props.id);
+        //         console.log('ID ditambahkan ke array yang ada');
+        //     }
+        //     console.log('kesini')
+        // }else {
+        //     arrayIsRead[props.manga] = [props.id]
+        //     console.log(arrayIsRead[props.manga] = [props.id])
+        //     console.log('ke else')
+        //     console.log(props.manga)
+        // }
+        // console.log(arrayIsRead)
+        //  localStorage.setItem('isRead', JSON.stringify(arrayIsRead))
         setIdChapter(props.id)
-        console.log(props.id)
         router.push(`detail/${props.id}`)
     }
 
@@ -34,7 +52,7 @@ const CardChapter = (props: Props) => {
                     <p className='text-xs text-slate-300'>{handleDate(props.date)}</p>
                 </div>
                 <div className='col-span-2 flex justify-center items-center'>
-                    <GrLinkNext className='text-white'/>
+                    <GrLinkNext className='text-white' />
                 </div>
             </div>
         </>

@@ -6,6 +6,7 @@ import CardChapter from '../molecules/CardChapter';
 import Skeleton from '../atoms/Skeleton';
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import Bookmark from '../molecules/Bookmark';
+import { useDetail} from '@/app/services/hooks/api';
 
 type Props = {}
 
@@ -18,7 +19,7 @@ const DetailManga = (props: Props) => {
     const getManga = async () => {
         setLoading(true)
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_MANGA_URL}/info?id=${id}`);
+            const response = await useDetail(id);
             const resJson = await response.json();
             console.log('API detail manga:', resJson);
 
@@ -89,7 +90,7 @@ const DetailManga = (props: Props) => {
                         ) : <>
                             {manga.chapters?.map((item: any, index: number) => {
                                 return (
-                                    <CardChapter title={item.title} date={item.releaseDate} id={item.id} key={item.id} />
+                                    <CardChapter manga={manga.id} title={item.title} date={item.releaseDate} id={item.id} key={item.id} />
                                 )
                             })}
                         </>}

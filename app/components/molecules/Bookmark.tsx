@@ -26,7 +26,6 @@ const Bookmark = (props: Props) => {
         }
 
         localStorage.setItem('bookmarks', JSON.stringify(arrayBookmarks));
-        console.log('Bookmarked Items:', arrayBookmarks);
         setMarked(!marked)
     }
 

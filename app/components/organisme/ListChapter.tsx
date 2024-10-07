@@ -3,6 +3,7 @@ import { useMangaStore } from '@/app/store/mangasStore'
 import React, { useEffect, useState } from 'react'
 import Image from '../atoms/Image'
 import { useSearchParams } from 'next/navigation';
+import { useChapter } from '@/app/services/hooks/api';
 
 type Props = {}
 
@@ -14,9 +15,8 @@ const ListChapter = (props: Props) => {
     const getChapter = async () => {
         setLoading(true)
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_MANGA_URL}/read?chapterId=${idChapter}`);
+            const response = await useChapter(idChapter);
             const resJson = await response.json();
-            console.log('API Chapter:', resJson);
 
             if (response.ok) {
                 setChapter(resJson);
@@ -46,7 +46,7 @@ const ListChapter = (props: Props) => {
                         {chapter.map((item: any, index: number) => {
                             return (
                                 <>
-                                    <Image src={item.img} alt={`image ${index + 1}`} />
+                                    <Image src={item.img} alt={`image ${index + 1}`} key={index} />
                                 </>
                             )
                         })}

@@ -6,11 +6,11 @@ import Skeleton from '../atoms/Skeleton';
 interface CardDetailProps {
   imgSrc: string;
   imgAlt: string;
-  loading: boolean
+  loading: boolean;
 }
 
-const CardDetail: FC<CardDetailProps> = ({ imgSrc, imgAlt, loading }) => {
-  console.log({ loading })
+const CardDetail: FC<CardDetailProps> = ({ imgSrc, imgAlt, loading}) => {
+
   return (
     <div className="w-3/4 rounded-md overflow-hidden ">
       <div className="h-64">
