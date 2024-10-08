@@ -1,3 +1,4 @@
+'use client'
 import Button from '../atoms/Button';
 import { useRouter } from 'next/navigation';
 import { useMangaStore } from '@/app/store/mangasStore';

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ListChapter from '../organisme/ListChapter'
 import Navbar from '../organisme/Navbar'

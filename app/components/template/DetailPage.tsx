@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import DetailManga from '../organisme/DetailManga'
 import Navbar from '../organisme/Navbar'

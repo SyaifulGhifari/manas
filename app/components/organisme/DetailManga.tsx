@@ -1,3 +1,4 @@
+'use client'
 import { useMangaStore } from '@/app/store/mangasStore';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
