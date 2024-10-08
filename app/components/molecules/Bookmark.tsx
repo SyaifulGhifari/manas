@@ -12,7 +12,7 @@ const Bookmark = (props: Props) => {
 
     const bookmarks = localStorage.getItem('bookmarks');
 
-    let arrayBookmarks = bookmarks ? JSON.parse(bookmarks) : [];
+    const arrayBookmarks = bookmarks ? JSON.parse(bookmarks) : [];
 
     const isBookmarked = arrayBookmarks.findIndex((bookmark: any) => bookmark.id === props.id);
 
