@@ -55,7 +55,7 @@ export const jumbotronManga = [{
   {
     imageSrc: '/images/rimuru.png',
     id: 'Tensei-Shitara-Slime-Datta-Ken',
-    desciption: "Light Yagami, a high school student, gains a notebook that allows him to kill anyone by writing their name, leading him into a dark path of power, justice, and obsession.",
+    desciption: "A man reincarnates as a slime in a fantasy world and rises to power, uniting monsters to build a peaceful nation.",
     title: 'Tensei Shitara Slime Datta Ken'
   }
   ]

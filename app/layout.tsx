@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Complete Manga Collection",
+  title: "Best Manga Collection",
   description: "Discover the latest manga updates across all genres. Read for free anytime, anywhere.",
 };
 
